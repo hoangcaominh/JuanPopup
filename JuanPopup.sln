@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuanPopup", "JuanPopup\JuanPopup.csproj", "{F8AFAB0A-A910-4886-94B0-DC91CA6F21B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modify", "Modify\Modify.csproj", "{7B8838E3-C52D-4293-956D-D8205C517099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonData", "Data\JsonData.csproj", "{9475F010-F73F-40C5-9216-B0CA7006C7DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8AFAB0A-A910-4886-94B0-DC91CA6F21B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8AFAB0A-A910-4886-94B0-DC91CA6F21B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8AFAB0A-A910-4886-94B0-DC91CA6F21B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8AFAB0A-A910-4886-94B0-DC91CA6F21B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8838E3-C52D-4293-956D-D8205C517099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8838E3-C52D-4293-956D-D8205C517099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8838E3-C52D-4293-956D-D8205C517099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8838E3-C52D-4293-956D-D8205C517099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9475F010-F73F-40C5-9216-B0CA7006C7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9475F010-F73F-40C5-9216-B0CA7006C7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9475F010-F73F-40C5-9216-B0CA7006C7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9475F010-F73F-40C5-9216-B0CA7006C7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81B5B9B6-8C3C-405B-9B56-6AD957A13954}
+	EndGlobalSection
+EndGlobal
