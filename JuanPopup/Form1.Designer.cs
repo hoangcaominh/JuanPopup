@@ -35,13 +35,12 @@
             // 
             // Header
             // 
-            this.Header.AutoSize = true;
-            this.Header.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Header.Font = new System.Drawing.Font("Arial", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Header.ForeColor = System.Drawing.Color.White;
             this.Header.Location = new System.Drawing.Point(9, 39);
             this.Header.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(108, 32);
+            this.Header.Size = new System.Drawing.Size(416, 65);
             this.Header.TabIndex = 0;
             this.Header.Text = "Header";
             this.Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
@@ -50,7 +49,7 @@
             // 
             this.Content.Font = new System.Drawing.Font("Arial", 11F);
             this.Content.ForeColor = System.Drawing.Color.White;
-            this.Content.Location = new System.Drawing.Point(12, 76);
+            this.Content.Location = new System.Drawing.Point(12, 110);
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(413, 70);
             this.Content.TabIndex = 1;
@@ -72,13 +71,13 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(437, 155);
+            this.ClientSize = new System.Drawing.Size(437, 189);
             this.Controls.Add(this.Author);
             this.Controls.Add(this.Content);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);

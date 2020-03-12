@@ -36,14 +36,14 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.EditGroup = new System.Windows.Forms.GroupBox();
             this.NewGroup = new System.Windows.Forms.GroupBox();
-            this.AuthorLabel = new System.Windows.Forms.Label();
-            this.ContentLabel = new System.Windows.Forms.Label();
-            this.HeaderLabel = new System.Windows.Forms.Label();
-            this.AuthorText = new System.Windows.Forms.TextBox();
-            this.HeaderText = new System.Windows.Forms.TextBox();
-            this.ContentText = new System.Windows.Forms.TextBox();
-            this.ApplyButton = new System.Windows.Forms.Button();
             this.ModeLabel = new System.Windows.Forms.Label();
+            this.ApplyButton = new System.Windows.Forms.Button();
+            this.ContentText = new System.Windows.Forms.TextBox();
+            this.HeaderText = new System.Windows.Forms.TextBox();
+            this.AuthorText = new System.Windows.Forms.TextBox();
+            this.HeaderLabel = new System.Windows.Forms.Label();
+            this.ContentLabel = new System.Windows.Forms.Label();
+            this.AuthorLabel = new System.Windows.Forms.Label();
             this.EditGroup.SuspendLayout();
             this.NewGroup.SuspendLayout();
             this.SuspendLayout();
@@ -127,25 +127,45 @@
             this.NewGroup.TabStop = false;
             this.NewGroup.Text = "New";
             // 
-            // AuthorLabel
+            // ModeLabel
             // 
-            this.AuthorLabel.AutoSize = true;
-            this.AuthorLabel.Location = new System.Drawing.Point(94, 24);
-            this.AuthorLabel.Name = "AuthorLabel";
-            this.AuthorLabel.Size = new System.Drawing.Size(38, 13);
-            this.AuthorLabel.TabIndex = 1;
-            this.AuthorLabel.Text = "Author";
-            this.AuthorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ModeLabel.AutoSize = true;
+            this.ModeLabel.Location = new System.Drawing.Point(6, 45);
+            this.ModeLabel.Name = "ModeLabel";
+            this.ModeLabel.Size = new System.Drawing.Size(0, 13);
+            this.ModeLabel.TabIndex = 8;
             // 
-            // ContentLabel
+            // ApplyButton
             // 
-            this.ContentLabel.AutoSize = true;
-            this.ContentLabel.Location = new System.Drawing.Point(88, 76);
-            this.ContentLabel.Name = "ContentLabel";
-            this.ContentLabel.Size = new System.Drawing.Size(44, 13);
-            this.ContentLabel.TabIndex = 2;
-            this.ContentLabel.Text = "Content";
-            this.ContentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ApplyButton.Location = new System.Drawing.Point(6, 19);
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.Size = new System.Drawing.Size(75, 23);
+            this.ApplyButton.TabIndex = 7;
+            this.ApplyButton.Text = "Apply";
+            this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            // 
+            // ContentText
+            // 
+            this.ContentText.Location = new System.Drawing.Point(138, 73);
+            this.ContentText.Multiline = true;
+            this.ContentText.Name = "ContentText";
+            this.ContentText.Size = new System.Drawing.Size(564, 46);
+            this.ContentText.TabIndex = 6;
+            // 
+            // HeaderText
+            // 
+            this.HeaderText.Location = new System.Drawing.Point(138, 47);
+            this.HeaderText.Name = "HeaderText";
+            this.HeaderText.Size = new System.Drawing.Size(564, 20);
+            this.HeaderText.TabIndex = 5;
+            // 
+            // AuthorText
+            // 
+            this.AuthorText.Location = new System.Drawing.Point(138, 21);
+            this.AuthorText.Name = "AuthorText";
+            this.AuthorText.Size = new System.Drawing.Size(564, 20);
+            this.AuthorText.TabIndex = 4;
             // 
             // HeaderLabel
             // 
@@ -158,45 +178,25 @@
             this.HeaderLabel.Text = "Header";
             this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AuthorText
+            // ContentLabel
             // 
-            this.AuthorText.Location = new System.Drawing.Point(138, 21);
-            this.AuthorText.Name = "AuthorText";
-            this.AuthorText.Size = new System.Drawing.Size(564, 20);
-            this.AuthorText.TabIndex = 4;
+            this.ContentLabel.AutoSize = true;
+            this.ContentLabel.Location = new System.Drawing.Point(88, 76);
+            this.ContentLabel.Name = "ContentLabel";
+            this.ContentLabel.Size = new System.Drawing.Size(44, 13);
+            this.ContentLabel.TabIndex = 2;
+            this.ContentLabel.Text = "Content";
+            this.ContentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // HeaderText
+            // AuthorLabel
             // 
-            this.HeaderText.Location = new System.Drawing.Point(138, 47);
-            this.HeaderText.Name = "HeaderText";
-            this.HeaderText.Size = new System.Drawing.Size(564, 20);
-            this.HeaderText.TabIndex = 5;
-            // 
-            // ContentText
-            // 
-            this.ContentText.Location = new System.Drawing.Point(138, 73);
-            this.ContentText.Multiline = true;
-            this.ContentText.Name = "ContentText";
-            this.ContentText.Size = new System.Drawing.Size(564, 46);
-            this.ContentText.TabIndex = 6;
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.Location = new System.Drawing.Point(6, 19);
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.Size = new System.Drawing.Size(75, 23);
-            this.ApplyButton.TabIndex = 7;
-            this.ApplyButton.Text = "Apply";
-            this.ApplyButton.UseVisualStyleBackColor = true;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
-            // 
-            // ModeLabel
-            // 
-            this.ModeLabel.AutoSize = true;
-            this.ModeLabel.Location = new System.Drawing.Point(6, 45);
-            this.ModeLabel.Name = "ModeLabel";
-            this.ModeLabel.Size = new System.Drawing.Size(0, 13);
-            this.ModeLabel.TabIndex = 8;
+            this.AuthorLabel.AutoSize = true;
+            this.AuthorLabel.Location = new System.Drawing.Point(94, 24);
+            this.AuthorLabel.Name = "AuthorLabel";
+            this.AuthorLabel.Size = new System.Drawing.Size(38, 13);
+            this.AuthorLabel.TabIndex = 1;
+            this.AuthorLabel.Text = "Author";
+            this.AuthorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.EditGroup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Modify";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Closing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.EditGroup.ResumeLayout(false);

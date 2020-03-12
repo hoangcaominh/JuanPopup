@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using JsonData;
@@ -10,6 +11,10 @@ namespace JuanPopup
         public Form1()
         {
             InitializeComponent();
+
+            int X = Screen.PrimaryScreen.WorkingArea.Width - Width - 10;
+            int Y = Screen.PrimaryScreen.WorkingArea.Height - Height - 4;
+            Location = new Point(X, Y);
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
