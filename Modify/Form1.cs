@@ -13,7 +13,7 @@ namespace Modify
             InitializeComponent();
         }
 
-        readonly DataClass data = new DataClass();
+        private readonly DataClass data = new DataClass();
 
         private void Form1_Load(object sender, EventArgs e)
         {

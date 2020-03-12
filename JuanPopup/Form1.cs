@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.IO;
 using JsonData;
 
 namespace JuanPopup
@@ -45,8 +46,23 @@ namespace JuanPopup
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            int index = Convert.ToInt32(File.ReadAllText("index.dat"));
             DataClass data = new DataClass();
-            (Author.Text, Header.Text, Content.Text) = data.Load();
+
+            if (index >= data.Size())
+            {
+                data.Shuffle();
+                data.SaveData();
+                index = 0;
+            }
+
+            if (data.Size() > 0)
+            {
+                (Author.Text, Header.Text, Content.Text) = data.Load(index);
+            }
+
+            index += 1;
+            File.WriteAllText("index.dat", index.ToString());
         }
     }
 }

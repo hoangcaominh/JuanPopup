@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace JsonData
 {
@@ -13,14 +14,13 @@ namespace JsonData
 
     public class DataClass
     {
-        public List<DataObject> Data { get; set; } = new List<DataObject>();
-        private static readonly string PATH = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "data.json"));
+        private List<DataObject> Data { get; set; } = new List<DataObject>();
 
         public DataClass()
         {
             try
             {
-                Data = JArray.Parse(File.ReadAllText(PATH)).ToObject<List<DataObject>>();
+                Data = JArray.Parse(File.ReadAllText("data.json")).ToObject<List<DataObject>>();
             }
             catch (Exception ex)
             {
@@ -38,31 +38,29 @@ namespace JsonData
             return ret;
         }
 
-        private int RandomIndex()
+        public int Size()
         {
-            Random rng = new Random();
-
-            return rng.Next(0, Data.Count);
+            return Data.Count;
         }
 
-        /// <summary>
-        /// Load a random quote
-        /// </summary>
-        /// <returns></returns>
-        public (string author, string header, string content) Load()
+        public void Shuffle()
         {
-            int index = RandomIndex();
-            string author = Data[index].author;
-            string header = Data[index].header;
-            string content = Data[index].content;
-            return (author, header, content);
+            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
+            int n = Data.Count;
+
+            while (n > 1)
+            {
+                byte[] box = new byte[1];
+                do provider.GetBytes(box);
+                while (!(box[0] < n * (byte.MaxValue / n)));
+                int k = (box[0] % n);
+                n--;
+                DataObject value = Data[k];
+                Data[k] = Data[n];
+                Data[n] = value;
+            }
         }
 
-        /// <summary>
-        /// Load a quote at a specific zero-based index
-        /// </summary>
-        /// <param name="index">Quote position</param>
-        /// <returns></returns>
         public (string author, string header, string content) Load(int index)
         {
             string author = Data[index].author;
@@ -88,7 +86,7 @@ namespace JsonData
 
         public void SaveData()
         {
-            File.WriteAllText(PATH, JArray.FromObject(Data).ToString());
+            File.WriteAllText("data.json", JArray.FromObject(Data).ToString());
         }
 
         public bool HasChanges()
