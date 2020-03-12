@@ -17,6 +17,12 @@ namespace Modify
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (data.Size() > 0)
+            {
+                EditButton.Enabled = true;
+                Delete.Enabled = true;
+            }
+
             DataList.DataSource = data.Printable();
             ModeLabel.Text = "Mode: Add";
         }
@@ -25,7 +31,6 @@ namespace Modify
         {
             mode = 0;
             ModeLabel.Text = "Mode: Add";
-            AuthorText.Text = HeaderText.Text = ContentText.Text = "";
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -42,6 +47,15 @@ namespace Modify
                 data.DeleteObject(DataList.SelectedIndex);
                 DataList.DataSource = data.Printable();
             }
+
+            // Catch exception
+            if (data.Size() == 0)
+            {
+                EditButton.Enabled = false;
+                Delete.Enabled = false;
+                mode = 0;
+                ModeLabel.Text = "Mode: Add";
+            }
         }
 
         private void ApplyButton_Click(object sender, EventArgs e)
@@ -51,6 +65,8 @@ namespace Modify
                 // Add
                 case 0:
                     data.AddObject(AuthorText.Text, HeaderText.Text, ContentText.Text);
+                    EditButton.Enabled = true;
+                    Delete.Enabled = true;
                     break;
                 // Edit
                 case 1:

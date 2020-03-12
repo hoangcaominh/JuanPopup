@@ -60,6 +60,7 @@
             // 
             // EditButton
             // 
+            this.EditButton.Enabled = false;
             this.EditButton.Location = new System.Drawing.Point(6, 48);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(75, 23);
@@ -78,6 +79,7 @@
             // 
             // Delete
             // 
+            this.Delete.Enabled = false;
             this.Delete.Location = new System.Drawing.Point(6, 77);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
